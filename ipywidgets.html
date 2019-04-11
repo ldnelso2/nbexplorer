@@ -1,13 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 
+
 <title>ipywidgets</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
 
 <style type="text/css">
     /*!
@@ -13072,20 +13070,17 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -13108,10 +13103,55 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+
+<style>
+        .cell.nbinteract-left {
+            width: 50%;
+            float: left;
+        }
+
+        .cell.nbinteract-right {
+            width: 50%;
+            float: right;
+        }
+
+        .cell.nbinteract-hide_in > .input {
+            display: none;
+        }
+
+        .cell.nbinteract-hide_out > .output_wrapper {
+            display: none;
+        }
+
+        .cell:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        div.output_subarea {
+            max-width: initial;
+        }
+
+        .jp-OutputPrompt {
+            display: none;
+        }
+    </style></head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+    <div class="container">
+      
+
+
+
+  <div class="cell text_cell">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+
 <script>
   jQuery(document).ready(function($) {
 
@@ -13135,27 +13175,14 @@ div#notebook {
 
 </style>
 
-<div id="preloader"></div><script>
-  function code_toggle() {
-    if (code_shown){
-      $('div.input').hide('500');
-      $('#toggleButton').val('Show Code')
-    } else {
-      $('div.input').show('500');
-      $('#toggleButton').val('Hide Code')
-    }
-    code_shown = !code_shown
-  }
+<div id="preloader"></div>
 
-  $( document ).ready(function(){
-    code_shown=false;
-    $('div.input').hide()
-  });
-</script>
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
@@ -13174,10 +13201,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Try simple widget functionality</span>
@@ -13197,10 +13228,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ingest the CSV file for fermentation fill and check array size</span>
@@ -13212,10 +13247,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ferm_fill</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -13231,21 +13270,19 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
-
+    
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f5331f44588&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f0a9a14ec18&gt;</pre>
 </div>
 
 </div>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13260,10 +13297,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yf</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">ferm_fill</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">])</span>
@@ -13273,10 +13314,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xf</span> <span class="o">=</span> <span class="n">ferm_fill</span><span class="o">.</span><span class="n">index</span>
@@ -13303,22 +13348,28 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    
 
 
 
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
 
 
- 
- 
-<div id="ec054158-9275-4d21-8457-59a07a415cb0"></div>
-<div class="output_subarea output_widget_view ">
-<script type="text/javascript">
-var element = $('#ec054158-9275-4d21-8457-59a07a415cb0');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "21616a28363c407a89e2ca790b2b6619", "version_major": 2, "version_minor": 0}
-</script>
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
 </div>
@@ -13326,10 +13377,14 @@ var element = $('#ec054158-9275-4d21-8457-59a07a415cb0');
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># interact(f, minimum=widgets.IntSlider(min=0,max=70000,step=100,value=55000));</span>
@@ -13347,22 +13402,26 @@ var element = $('#ec054158-9275-4d21-8457-59a07a415cb0');
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    
 
 
 
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
 
 
- 
- 
-<div id="c10db852-b472-4cfc-a97f-8c90aaf8fa20"></div>
-<div class="output_subarea output_widget_view ">
-<script type="text/javascript">
-var element = $('#c10db852-b472-4cfc-a97f-8c90aaf8fa20');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "d8d24ffb078e4425af60247dbbd12620", "version_major": 2, "version_minor": 0}
-</script>
+
+<div class="output_text output_subarea ">
+<pre>4</pre>
 </div>
 
 </div>
@@ -13370,7 +13429,7 @@ var element = $('#c10db852-b472-4cfc-a97f-8c90aaf8fa20');
 </div>
 </div>
 
-</div><script>
+  </div><script>
   $(document).ready(function(){
     $('div.prompt').hide();
     $('div.back-to-top').hide();
@@ -13383,9 +13442,13 @@ var element = $('#c10db852-b472-4cfc-a97f-8c90aaf8fa20');
 <footer id="attribution" style="float:right; color:#999; background:#fff;">
 Created with Jupyter, delivered by Fastly, rendered by Rackspace.
 </footer>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -13395,10 +13458,14 @@ Created with Jupyter, delivered by Fastly, rendered by Rackspace.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -13408,10 +13475,14 @@ Created with Jupyter, delivered by Fastly, rendered by Rackspace.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -13421,10 +13492,14 @@ Created with Jupyter, delivered by Fastly, rendered by Rackspace.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -13434,12 +13509,30 @@ Created with Jupyter, delivered by Fastly, rendered by Rackspace.
 </div>
 </div>
 
-</div>
+  </div>
+
+
+
+<!-- Loads nbinteract package -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'ldnelso2/nbexplorer/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script>
     </div>
   </div>
 </body>
-
- 
-
-
-</html>
